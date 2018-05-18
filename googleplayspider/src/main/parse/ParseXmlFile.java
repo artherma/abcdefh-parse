@@ -112,6 +112,7 @@ public class ParseXmlFile {
             }
         }catch (DocumentException e){
             e.printStackTrace();
+            StoreApkGexf.commonErrorLog(new File(StoreApkGexf.error_log),e.getMessage()+"\n");
         }
 
     }
@@ -183,7 +184,9 @@ public class ParseXmlFile {
 
             }catch (SQLException e){
                 e.printStackTrace();
-                System.out.println("数据库插入出现异常");
+                String error = e.getMessage()+"\n"+"apk文件["+apkName+"]\n";
+                StoreApkGexf.commonErrorLog(new File(StoreApkGexf.error_log),error);
+                System.out.println("数据库表method插入出现异常，apk文件["+apkName+"]");
             }
 
         } else {
@@ -402,7 +405,9 @@ public class ParseXmlFile {
 
             }catch (SQLException e){
                 e.printStackTrace();
-                System.out.println("数据库插入出现异常");
+                String error = e.getMessage()+"\n"+"apk文件["+apkName+"]\n";
+                StoreApkGexf.commonErrorLog(new File(StoreApkGexf.error_log),error);
+                System.out.println("数据库表invoke插入出现异常，apk文件["+apkName+"]");
             }
         }else {
             System.out.println("插入调用关系时element为null，或数据库连接异常！！");

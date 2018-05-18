@@ -24,7 +24,7 @@ public class StoreApkGexf {
     private static final String gexfToSqlLog = "E:\\gexf\\proSql\\method_insert_f8.log";    //正常日志
     private static final String HAS_PROCESS = "E:\\gexf\\proSql\\has_pro_f8.txt";   // 已处理的apk
     private static final String ERROR_PROCESS = "E:\\gexf\\proSql\\error_pro_f8.txt"; // 出错的apk
-    private static final String error_log = "E:\\gexf\\proSql\\method_insert_f8_error.log"; // 未处理的错误日志
+    public static final String error_log = "E:\\gexf\\proSql\\method_insert_f8_error.log"; // 未处理的错误日志
     private static final String error_xml = "E:\\gexf\\proSql\\method_insert_f8_xmlError.log"; //xml文件错误日志，例如不存在xml文件或者文件过小（10字节）
     private static final String error_gexf = "E:\\gexf\\proSql\\method_insert_f8_gexfError.log"; //gexf文件错误日志，例如不存在gexf文件
 
@@ -62,6 +62,7 @@ public class StoreApkGexf {
                 }
             }catch (SQLException e){
                 e.printStackTrace();
+                commonErrorLog(errorLogFile,e.getMessage()+"\n");
             }
 
             File[] apkFiles = apkDir.listFiles();
@@ -98,6 +99,7 @@ public class StoreApkGexf {
                     }
                 }catch (Exception e){
                     e.printStackTrace();
+                    commonErrorLog(errorLogFile,e.getMessage()+"\n");
                 }
             }
             // 关闭连接
@@ -118,7 +120,7 @@ public class StoreApkGexf {
         }
     }
 
-    // 处理单独的apk信息
+    // 处理单独的apk信息，返回true or false
     private static boolean getOneApkMethod(String filePath,String gexfDir,String xmlDir,File errorLog,String apkDir,Connection connection){
         File errorXmlFile = new File(error_xml);
         File errorGexfFile = new File(error_gexf);
@@ -224,7 +226,7 @@ public class StoreApkGexf {
     }
 
 //                    追加日志
-    private static void commonErrorLog(File errorLogFile,String data){
+    public static void commonErrorLog(File errorLogFile,String data){
         if(data != null ){
             try {
                 FileUtils.write(errorLogFile,data,"utf-8",true);
