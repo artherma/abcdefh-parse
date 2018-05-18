@@ -78,8 +78,8 @@
       <file leaf-file-name="StoreApkGexf.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/parse/StoreApkGexf.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="99" column="40" lean-forward="true" selection-start-line="99" selection-start-column="40" selection-end-line="99" selection-end-column="40" />
+            <state relative-caret-position="294">
+              <caret line="71" column="26" lean-forward="true" selection-start-line="71" selection-start-column="26" selection-end-line="71" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#selectFromApkstoreInfo#0;class#StoreApkGexf#0" expanded="false" />
@@ -506,12 +506,12 @@
       <workItem from="1526528807569" duration="1924000" />
       <workItem from="1526538877911" duration="21879000" />
       <workItem from="1526568318904" duration="16703000" />
-      <workItem from="1526623874875" duration="9490000" />
+      <workItem from="1526623874875" duration="10140000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="267974000" />
+    <option name="totallyTimeSpent" value="268624000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1168,8 +1168,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/parse/StoreApkGexf.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="99" column="40" lean-forward="true" selection-start-line="99" selection-start-column="40" selection-end-line="99" selection-end-column="40" />
+        <state relative-caret-position="294">
+          <caret line="71" column="26" lean-forward="true" selection-start-line="71" selection-start-column="26" selection-end-line="71" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#selectFromApkstoreInfo#0;class#StoreApkGexf#0" expanded="false" />
