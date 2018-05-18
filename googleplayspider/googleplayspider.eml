@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component inherit-compiler-output="true" jdk="1.8" jdk_type="JavaSDK">
+	<output-test url="file://$MODULE_DIR$/out/test/googleplayspider"/>
+	<exclude-output/>
+	<contentEntry url="file://$MODULE_DIR$"/>
+	<levels>
+		<level name="commons-codec-1.9" value="project"/>
+		<level name="commons-io-2.6" value="project"/>
+		<level name="commons-lang-2.6" value="project"/>
+	</levels>
+</component>

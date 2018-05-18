@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eclipse-userlibraries>
+  <library name="commons-codec-1.9">
+    <archive path="D:/tools/flow/google-paly/googleplayspider/lib/commons-codec-1.9.jar" />
+    <archive path="D:/tools/flow/google-paly/googleplayspider/lib/commons-logging-1.2.jar" />
+    <archive path="D:/tools/flow/google-paly/googleplayspider/lib/dom4j-2.1.0.jar" />
+    <archive path="D:/tools/flow/google-paly/googleplayspider/lib/fluent-hc-4.5.3.jar" />
+    <archive path="D:/tools/flow/google-paly/googleplayspider/lib/httpclient-4.5.3.jar" />
+    <archive path="D:/tools/flow/google-paly/googleplayspider/lib/httpclient-cache-4.5.3.jar" />
+    <archive path="D:/tools/flow/google-paly/googleplayspider/lib/httpclient-win-4.5.3.jar" />
+    <archive path="D:/tools/flow/google-paly/googleplayspider/lib/httpcore-4.4.6.jar" />
+    <archive path="D:/tools/flow/google-paly/googleplayspider/lib/httpmime-4.5.3.jar" />
+    <archive path="D:/tools/flow/google-paly/googleplayspider/lib/jna-4.1.0.jar" />
+    <archive path="D:/tools/flow/google-paly/googleplayspider/lib/jna-platform-4.1.0.jar" />
+    <archive path="D:/tools/flow/google-paly/googleplayspider/lib/jsoup-1.10.3.jar" />
+    <archive path="D:/tools/flow/google-paly/googleplayspider/lib/mysql-connector-java-5.1.46-bin.jar" />
+  </library>
+</eclipse-userlibraries>
+
