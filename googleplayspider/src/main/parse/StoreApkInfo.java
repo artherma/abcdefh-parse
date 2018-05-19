@@ -153,7 +153,7 @@ public class StoreApkInfo {
 //                    System.out.println("文件："+filePath +",gexf不存在");
                 }
 
-//                检查xml文件
+//                检查xml文件ssss
                 if(tmpXmlFile.exists()){
                     hasXml = "1";
                     xmlSize = tmpXmlFile.length();
