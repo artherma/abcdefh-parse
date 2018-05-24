@@ -1,5 +1,6 @@
 package main.parse;
 
+import main.bean.MethodItem;
 import main.util.ContenUtils;
 import main.util.FileNameUtil;
 import org.dom4j.*;

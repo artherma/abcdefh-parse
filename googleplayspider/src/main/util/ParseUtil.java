@@ -284,7 +284,7 @@ public class ParseUtil {
     public static void main(String[] args) throws Exception{
 
 //        String html = ContenUtils.readAsString("E:\\bhtml.html");
-        String html = ContenUtils.readAsString("E:\\uhtml.html");
+        String html = ContenUtils.readAsString("E:\\gexf\\fa-html.tar\\fa-html\\com.cocoplay.cocostar.html");
         AppInfo appinfo = parse(html);
         if(appinfo != null){
             System.out.println(appinfo.toString());

@@ -1,4 +1,4 @@
-package main.parse;
+package main.bean;
 
 /**
  * apk的方法调用中 的方法类

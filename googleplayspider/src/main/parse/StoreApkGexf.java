@@ -21,26 +21,29 @@ import java.util.Scanner;
  */
 public class StoreApkGexf {
 
-    private static final String gexfToSqlLog = "E:\\gexf\\proSql\\method_insert_f8.log";    //正常日志
-    private static final String HAS_PROCESS = "E:\\gexf\\proSql\\has_pro_f8.txt";   // 已处理的apk
-    private static final String ERROR_PROCESS = "E:\\gexf\\proSql\\error_pro_f8.txt"; // 出错的apk
-    public static final String error_log = "E:\\gexf\\proSql\\method_insert_f8_error.log"; // 未处理的错误日志
-    private static final String error_xml = "E:\\gexf\\proSql\\method_insert_f8_xmlError.log"; //xml文件错误日志，例如不存在xml文件或者文件过小（10字节）
-    private static final String error_gexf = "E:\\gexf\\proSql\\method_insert_f8_gexfError.log"; //gexf文件错误日志，例如不存在gexf文件
+    private static final String gexfToSqlLog = "E:\\gexf\\proSql\\method_insert_fa.log";    //正常日志
+    private static final String HAS_PROCESS = "E:\\gexf\\proSql\\has_pro_fa.txt";   // 已处理的apk
+    private static final String ERROR_PROCESS = "E:\\gexf\\proSql\\error_pro_fa.txt"; // 出错的apk
+    public static final String error_log = "E:\\gexf\\proSql\\method_insert_fa_error.log"; // 未处理的错误日志
+    private static final String error_xml = "E:\\gexf\\proSql\\method_insert_fa_xmlError.log"; //xml文件错误日志，例如不存在xml文件或者文件过小（10字节）
+    private static final String error_gexf = "E:\\gexf\\proSql\\method_insert_fa_gexfError.log"; //gexf文件错误日志，例如不存在gexf文件
 
     public static void main(String[] args) {
-        String apkFilePath = "I:\\workfile\\playdrone-apk-f8";  //原始的apk目录
-        String gexfPath = "E:\\gexf\\apk-f8"; //apk对应的gexf目录
-        String xmlPath = "E:\\gexf\\xml\\f8";   //apk对应的xml目录
-        String apkDir = "f8";   //手动设置的f8/f9/fa
+        String gexfPath = "E:\\gexf\\apk-fa\\gexf";
+        String xmlPath = "E:\\gexf\\xml\\fa";   //apk对应的xml目录
+        String apkDir = "fa";   //手动设置的f8/f9/fa
 
-        proGexf(apkFilePath,gexfPath,xmlPath,apkDir);
+        proGexf(gexfPath,xmlPath,apkDir);
 
     }
 
-
-    private static void proGexf(String apkFilePath,String gexfPath,String xmlPath,String apkRelDir) {
-        File apkDir = new File(apkFilePath);
+    /**
+     *
+     * @param gexfPath gexf路径
+     * @param xmlPath xml路径
+     * @param apkRelDir f8/f9/fa
+     */
+    private static void proGexf(String gexfPath,String xmlPath,String apkRelDir) {
         File gexfDir = new File(gexfPath);
         File xmlDir = new File(xmlPath);
         File errorLogFile = new File(error_log);
@@ -49,9 +52,9 @@ public class StoreApkGexf {
         File errorProFile = new File(ERROR_PROCESS);
 
 
-        if (apkDir.exists() && gexfDir.exists() && xmlDir.exists() &&
-                apkDir.isDirectory() && gexfDir.isDirectory() && xmlDir.isDirectory()) {
-            System.out.println("apk,gexf,xml目录都存在");
+        if (gexfDir.exists() && gexfDir.exists() && xmlDir.exists() &&
+                gexfDir.isDirectory() && gexfDir.isDirectory() && xmlDir.isDirectory()) {
+            System.out.println("gexf,xml目录都存在");
 
             Connection connection = SaveToMysql.getDefaultConn();
             try {
@@ -65,12 +68,15 @@ public class StoreApkGexf {
                 commonErrorLog(errorLogFile,e.getMessage()+"\n");
             }
 
-            File[] apkFiles = apkDir.listFiles();
+            File[] apkFiles = gexfDir.listFiles();
             // 获取是否处理的hashmap
             HashMap<String,String> abcdMap = preCheckFile(HAS_PROCESS,ERROR_PROCESS);
             int counter  =0;
             for(File tmpFile: apkFiles){
                 counter++;
+                if(counter > 100){
+                    break;
+                }
                 try {
     //                预处理，检查
                     String tmpName = tmpFile.getName();
@@ -121,30 +127,30 @@ public class StoreApkGexf {
     }
 
     // 处理单独的apk信息，返回true or false
+
+    /**
+     *
+     * @param filePath
+     * @param gexfDir
+     * @param xmlDir
+     * @param errorLog
+     * @param apkDir
+     * @param connection
+     * @return
+     */
     private static boolean getOneApkMethod(String filePath,String gexfDir,String xmlDir,File errorLog,String apkDir,Connection connection){
         File errorXmlFile = new File(error_xml);
         File errorGexfFile = new File(error_gexf);
 
-//        Connection connection = SaveToMysql.getDefaultConn();
-//        try {
-//            if(connection != null && !connection.isClosed()){
-//                connection.setAutoCommit(false);
-//            }else {
-//                return;
-//            }
-//        }catch (SQLException e){
-//            e.printStackTrace();
-//        }
-
-
-        File apkFile = new File(filePath);
-        // 带.apk后缀的
-        String fileNameWithSuffix = apkFile.getName();
-        // 不带.apk后缀
-        String fileNameWithOutDotApk = fileNameWithSuffix.substring(0, fileNameWithSuffix.length() - 4);
-        if (fileNameWithSuffix.matches("(.*)-(\\d+)\\.apk$")) {
+        File gexfFile = new File(filePath);
+        // 带.gexf后缀的
+        String fileNameWithSuffix = gexfFile.getName();
+        // 不带.gexf后缀
+        String fileNameWithOutDotApk = fileNameWithSuffix.substring(0, fileNameWithSuffix.length() - 5);
+        String apkFileName = fileNameWithOutDotApk+".apk";
+        if (fileNameWithSuffix.matches("(.*)-(\\d+)\\.gexf$")) {
             // 包名 com.tencent.qq
-            String packageName = ContenUtils.getRegContent(fileNameWithSuffix, "(.*)-(\\d+)\\.apk$", 1);
+//            String packageName = ContenUtils.getRegContent(fileNameWithSuffix, "(.*)-(\\d+)\\.gexf", 1);
             String tmpGexfPath = gexfDir + File.separator + fileNameWithOutDotApk + ".gexf";
             String tmpXmlPath = xmlDir + File.separator + fileNameWithOutDotApk + ".xml";
 
@@ -159,7 +165,7 @@ public class StoreApkGexf {
                     String version = manifestXmlMap.get("version");
                     String packagename = manifestXmlMap.get("packagename");
                     // @TODO 用到了数据库连接
-                    HashMap<String,String> storeInfoMap = selectFromApkstoreInfo(connection,fileNameWithSuffix,apkDir);
+                    HashMap<String,String> storeInfoMap = selectFromApkstoreInfo(connection,apkFileName,apkDir);
                     String recordId = storeInfoMap.get("id");
                     if(version.isEmpty()){
                         String data = "apk文件["+fileNameWithSuffix+"]，的manifest.xml中version为空，请注意\n";
@@ -168,7 +174,7 @@ public class StoreApkGexf {
 
                     try {
                         // @TODO 用到了数据库连接
-                        ParseXmlFile.parseXmlGexf(tmpGexfPath,connection,version,fileNameWithSuffix,recordId);
+                        ParseXmlFile.parseXmlGexf(tmpGexfPath,connection,version,apkFileName,recordId);
                         return true;
 
                     }catch (SQLException e){
