@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>绘制一定数量的节点图</title>
+</head>
+<body>
+	<script type="text/javascript" src="d3.min.js"></script>
+	<script type="text/javascript">
+
+		var width =5000;
+		var height = 5000;
+
+		var svg=d3.select("body")
+				.append("svg")
+				.attr("width",width)
+				.attr("height",height);
+
+		// var mydata = "oneRelation.txt";
+		d3.json("oneRelation.txt",function(error,root){
+			if(error){
+				return console.log(error);
+			}
+
+			var force=d3.layout.force()
+				.nodes(root.nodes)
+				.links(root.edges)
+				.size([width,height])
+				.linkDistance(200)
+				.charge(-400);
+
+// 力开始作用，颜色
+			force.start();
+			var color = d3.scale.category20();
+
+	
+	// 箭头
+	var defs = svg.append("defs");
+	var arrowMarker=defs.append("marker")
+				.attr("id","arrow")
+				.attr("markerUnits","strokeWidth")
+				.attr("markerWidth","12")
+				.attr("markerHeight","12")
+				.attr("viewBox","0 0 12 12")
+				.attr("refX","6")
+				.attr("refY","6")
+				.attr("orient","auto");
+
+	var arrow_path="M2,2 L10,6 L2,10 L6,6 L2,2";
+
+	arrowMarker.append("path").attr("d",arrow_path)
+	.attr("fill","#000");
+							
+			
+
+
+// 			节点，填充颜色
+			var svg_nodes=svg.selectAll("circle")
+							.data(root.nodes)
+							.enter()
+							.append("circle")
+							.attr("r",10)
+							.attr("fill",function(d,i){
+								return color(i);
+							})
+							// 鼠标掠过
+							.on("mouseover",function(){
+									d3.select(this)
+										.transition()
+										.duration(500)
+										.attr("fill","yellow")
+				
+							})
+							.on("mouseout",function(){
+								d3.select(this).attr("fill",function(d,i){
+									return color(i);
+								})
+							})
+							.call(force.drag);
+
+
+			// 描述节点的文字
+			var svg_texts = svg.selectAll("text")
+							.data(root.nodes)
+							.enter()
+							.append("text")
+							.style("fill","black")
+							.attr("dx",20)
+							.attr("dy",8)
+							.text(function (d){
+								//从json文件中取
+								return d.content.mid;
+							});
+
+			//连线,线的宽度和颜色,中间和尾部添加箭头
+			var svg_edges = svg.selectAll("line")
+							.data(root.edges)
+							.enter()
+							.append("line")
+							.style("stroke","#ccc")
+							.style("stroke-width",2)
+							.attr("marker-start","url(#arrow)")
+							.attr("marker-mid","url(#arrow)")
+							.attr("marker-end","url(#arrow)");
+							
+			// 箭头的位置
+			svg_edges.each(function (d){
+				if (true) {
+					// Work around IE bug regarding paths with markers
+					// Credit: #6 and http://stackoverflow.com/a/18475039/106302
+					this.parentNode.insertBefore(this, this);
+				}
+				var x1 = d.source.x,
+				y1 = d.source.y;
+				x2 = d.target.x,
+				y2 = d.target.y;
+
+				var l=Math.sqrt(Math.pow(x2-x1,2)+Math.pow(y2-y1,2));
+				var l1=10;//箭头方向缩短的长度
+				var x3=x1+((l-l1)/l)*(x2-x1);
+				var y3=y1+((l-l1)/l)*(y2-y1);
+
+				d3.select(this)
+				.attr('x2', x3)
+				.attr('y2', y3);
+	
+			});
+
+
+			force.on("tick",function(){
+				
+
+				//更新连线坐标
+				svg_edges.attr("x1",function (d){return d.source.x;})
+							.attr("y1",function(d){return d.source.y;})
+							.attr("x2",function(d){return d.target.x;})
+							.attr("y2",function(d){return d.target.y;});
+
+				// 更新节点坐标
+				svg_nodes.attr("cx",function(d){return d.x;})
+							.attr("cy",function(d){return d.y;});
+
+				//更新文字坐标
+				svg_texts.attr("x",function(d){return d.x;})
+						.attr("y",function(d){return d.y;});
+
+			});				
+
+		});
+
+	</script>
+</body>
+</html>
