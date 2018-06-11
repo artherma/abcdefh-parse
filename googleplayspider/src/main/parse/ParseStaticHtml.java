@@ -27,7 +27,6 @@ public class ParseStaticHtml {
 
             GooglePAppInfo appInfo = new GooglePAppInfo();
             Document document = Jsoup.parse(html);
-
 //            名称
             String appName = null;
             Elements appNameEles =document.select("h1[itemprop=name]");

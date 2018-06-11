@@ -1,10 +1,10 @@
 package main;
 
 import main.parse.SaveToMysql;
+import main.util.ContenUtils;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 import org.apache.commons.io.FileUtils;
-import sun.reflect.misc.FieldUtil;
 
 import java.io.File;
 import java.io.IOException;
@@ -81,7 +81,13 @@ public class DrawGraphy {
         }
     }
 
-
+    /**
+     * 获取调用关系
+     * @param connection
+     * @param apk_file_name
+     * @param apk_version
+     * @return
+     */
     private static HashMap<String,ArrayList<String>> getOneAppInvoke(Connection connection, String apk_file_name,
                                                              String apk_version){
         if(connection != null) {
@@ -128,6 +134,66 @@ public class DrawGraphy {
             return null;
         }
     }
+
+    private static HashMap<String,String> getOneAppDetail(Connection connection,String apk_file_name,
+                                                          String apk_version){
+        if(connection != null) {
+            String regPackageName = ContenUtils.getRegContent(apk_file_name,"(.*)-(\\d+)\\.apk$",1);
+            String sql = "SELECT package_name,app_name,tag_info," +
+                    "description,score,rate_num," +
+                    "rate5,updated_time,current_version " +
+                    "from apk_detail where package_name = ? ";
+            PreparedStatement preparedStatement = null;
+            HashMap<String,String> detailMap = new HashMap<String,String>();
+
+            try {
+                preparedStatement = connection.prepareStatement(sql);
+                preparedStatement.setString(1,regPackageName);
+                ResultSet resultSet = preparedStatement.executeQuery();
+                String package_name = "";
+                String app_name = "";
+                String tag_info = "";
+                String description = "";
+                String score = "";
+                String rate_num = "";
+                String rate5 = "";
+                String updated_time = "";
+                String current_version = "";
+
+                if(resultSet != null && resultSet.next()){
+                    package_name = resultSet.getString(1);
+                    app_name = resultSet.getString(2);
+                    tag_info = resultSet.getString(3);
+                    description = resultSet.getString(4);
+                    score = resultSet.getString(5);
+                    rate_num = resultSet.getString(6);
+                    rate5 = resultSet.getString(7);
+                    updated_time = resultSet.getString(8);
+                    current_version = resultSet.getString(9);
+                }
+                detailMap.put("package_name",package_name);
+                detailMap.put("app_name",app_name);
+                detailMap.put("tag_info",tag_info);
+                detailMap.put("description",description);
+                detailMap.put("score",score);
+                detailMap.put("rate_num",rate_num);
+                detailMap.put("rate5",rate5);
+                detailMap.put("updated_time",updated_time);
+                detailMap.put("current_version",current_version);
+
+                resultSet.close();
+                return detailMap;
+
+            }catch (SQLException e){
+                e.printStackTrace();
+            }
+        }else {
+            return  null;
+        }
+
+        return null;
+    }
+
 
     // 筛选关系
     private static JSONObject getRelationJson(HashMap<String,HashMap<String,String>> refMethodData,
@@ -209,6 +275,7 @@ public class DrawGraphy {
     // 获取某个app的关系图
     private static JSONObject getOneAppRelation(HashMap<String,HashMap<String,String>> refMethodData,
                                                 HashMap<String,ArrayList<String>> refInvokeData,
+                                                HashMap<String,String> refDatailData,
                                                 String apk_file_name,String apk_version,boolean limit,int totalNodes){
         if(refMethodData != null && refInvokeData != null){
             JSONObject jsonObject = new JSONObject();
@@ -221,10 +288,14 @@ public class DrawGraphy {
             int newOrderMapSize = 0;
             Iterator<String> iterator = refMethodData.keySet().iterator();
             while (iterator.hasNext()){
-//                if(limit && (nodesArray.size() >= totalNodes)){
-//                    break;
-//                }
+                if(limit && (nodesArray.size() >= totalNodes)){
+                    break;
+                }
                 String tmpNodeKey = iterator.next();
+                if(!refInvokeData.containsKey(tmpNodeKey) || refInvokeData.get(tmpNodeKey).size() < 1){
+                    continue;
+                }
+
                 JSONObject tmpNodeJO = new JSONObject();
                 tmpNodeJO.element("name",tmpNodeKey);
                 tmpNodeJO.element("content",JSONObject.fromObject(refMethodData.get(tmpNodeKey)));
@@ -241,13 +312,27 @@ public class DrawGraphy {
             while (invokeIterator.hasNext()){
                  String tmpNodeKey = invokeIterator.next(); //父节点
                  ArrayList<String> tmpNodeChildList = refInvokeData.get(tmpNodeKey);// 子节点集合
-//                if(!newOrderMap.containsKey(tmpNodeKey)){
-//                    continue;
-//                }
+                if(!newOrderMap.containsKey(tmpNodeKey)){
+                    continue;
+                }
                  for (int i = 0; i < tmpNodeChildList.size(); i++) {
                      String tmpChildKey = tmpNodeChildList.get(i); //子节点名称
                      String source = newOrderMap.get(tmpNodeKey);//取序号
+                     if(!newOrderMap.containsKey(tmpChildKey)){ //不包括target，再次加入NodesArray and newOrderMap
+                         JSONObject newTargetNotInNodesArray = new JSONObject();
+                         newTargetNotInNodesArray.element("name",tmpChildKey);
+                         newTargetNotInNodesArray.element("content",JSONObject.fromObject(refMethodData.get(tmpChildKey)));
+                         // 再次加入NodesArray and newOrderMap
+                         nodesArray.add(newTargetNotInNodesArray);
+                         newOrderMapSize = newOrderMap.size();
+                         newOrderMap.put(tmpChildKey,newOrderMapSize+"");
+                     }
+
                      String target = newOrderMap.get(tmpChildKey);
+                     // @TODO 如果自己调用自己，那么不加入到集合中
+                     if(source.equals(target)){
+                         continue;
+                     }
 
                      JSONObject tmpEdgeJS =new JSONObject();
                      tmpEdgeJS.element("source",Integer.parseInt(source));
@@ -259,6 +344,7 @@ public class DrawGraphy {
             // 合成 jsonObject
             jsonObject.element("nodes",nodesArray);
             jsonObject.element("edges",edgesArray);
+            jsonObject.element("detail",JSONObject.fromObject(refDatailData));
             return jsonObject;
         }else {
             return null;
@@ -277,6 +363,7 @@ public class DrawGraphy {
 
         HashMap<String,HashMap<String,String>> myMethodData = null;
         HashMap<String,ArrayList<String>> myInvokeData = null;
+        HashMap<String,String> myDetailData = null;
         JSONObject graphyJson = null;
         try {
             connection = SaveToMysql.getDefaultConn();
@@ -285,6 +372,7 @@ public class DrawGraphy {
 
                 myMethodData = getOneAppMethod(connection,apk_file_name,apk_version);
                 myInvokeData = getOneAppInvoke(connection,apk_file_name,apk_version);
+                myDetailData = getOneAppDetail(connection,apk_file_name,apk_version);
             }
         }catch (Exception e){
             e.printStackTrace();
@@ -304,7 +392,7 @@ public class DrawGraphy {
             e.printStackTrace();
         }
 
-        graphyJson = getOneAppRelation(myMethodData,myInvokeData,apk_file_name,apk_version,false,100);
+        graphyJson = getOneAppRelation(myMethodData,myInvokeData,myDetailData,apk_file_name,apk_version,true,Integer.parseInt(args[0]));
         if(graphyJson != null){
             try {
                 FileUtils.writeStringToFile(graphyFile,graphyJson.toString(),"utf-8");
@@ -314,8 +402,10 @@ public class DrawGraphy {
             }
         }
 
-         System.out.println("method-size:"+myMethodData.size());
-         System.out.println("invoke-size:"+myInvokeData.size());
+//         System.out.println("method-size:"+myMethodData.size());
+//         System.out.println("invoke-size:"+myInvokeData.size());
+        System.out.println("node-size:"+graphyJson.getJSONArray("nodes").size());
+        System.out.println("edges-size:"+graphyJson.getJSONArray("edges").size());
 
     }
 

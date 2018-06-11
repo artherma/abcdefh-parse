@@ -23,162 +23,89 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="vertical" split-proportion="0.1">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="SaveToMysql.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/parse/SaveToMysql.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2226">
-                  <caret line="106" column="46" lean-forward="false" selection-start-line="106" selection-start-column="46" selection-end-line="106" selection-end-column="46" />
-                  <folding>
-                    <element signature="method#getConn#0;class#SaveToMysql#0" expanded="false" />
-                    <marker date="1527052984893" expanded="true" signature="1120:1151" ph="insert into cg... " />
-                    <marker date="1527052984893" expanded="true" signature="2536:2567" ph="insert into cg... " />
-                    <marker date="1527052984893" expanded="true" signature="3309:3325" ph="select * fro... cg" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ParseXmlFile.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/parse/ParseXmlFile.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="4725">
-                  <caret line="419" column="38" lean-forward="false" selection-start-line="419" selection-start-column="36" selection-end-line="419" selection-end-column="38" />
-                  <folding>
-                    <element signature="e#667#705#0" expanded="false" />
-                    <element signature="e#6473#6516#0" expanded="false" />
-                    <element signature="method#geneMethodItem#0;class#ParseXmlFile#0" expanded="false" />
-                    <element signature="e#9691#9712#0" expanded="false" />
-                    <element signature="method#getParams#0;class#ParseXmlFile#0" expanded="false" />
-                    <element signature="method#getReturn#0;class#ParseXmlFile#0" expanded="false" />
-                    <element signature="method#getParamsType#0;class#ParseXmlFile#0" expanded="false" />
-                    <element signature="method#createXml#0;class#ParseXmlFile#0" expanded="false" />
-                    <marker date="1526876985160" expanded="true" signature="4926:5161" ph="INSERT INTO method" />
-                    <marker date="1526876985160" expanded="true" signature="14928:14996" ph="Insert into invoke... " />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="MethodItem.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/bean/MethodItem.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="126">
-                  <caret line="6" column="25" lean-forward="false" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
-                  <folding>
-                    <element signature="e#195#196#0" expanded="true" />
-                    <element signature="e#226#227#0" expanded="true" />
-                    <element signature="e#271#272#0" expanded="true" />
-                    <element signature="e#311#312#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="StoreApkGexf.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/parse/StoreApkGexf.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="504">
-                  <caret line="35" column="41" lean-forward="false" selection-start-line="35" selection-start-column="41" selection-end-line="35" selection-end-column="41" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#9163#9180#0" expanded="false" />
-                    <marker date="1526992717945" expanded="true" signature="10160:10351" ph="select * fro... apk_store_info" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="DrawGraphy.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/DrawGraphy.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="64" column="50" lean-forward="false" selection-start-line="64" selection-start-column="50" selection-end-line="64" selection-end-column="50" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#1470#1502#0" expanded="true" />
-                    <element signature="e#2103#2119#0" expanded="true" />
-                    <element signature="e#3498#3525#0" expanded="true" />
-                    <element signature="e#4874#4882#0" expanded="true" />
-                    <element signature="e#8956#8972#0" expanded="true" />
-                    <marker date="1527136947954" expanded="true" signature="1168:1228" ph="select * fro... method" />
-                    <marker date="1527136947954" expanded="true" signature="3210:3284" ph="select * fro... invoke" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="TagSortedApplication" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/util/TagSortedApplication">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="357">
-                  <caret line="17" column="5" lean-forward="false" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ParseStaticHtml.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/parse/ParseStaticHtml.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="3612">
-                  <caret line="184" column="13" lean-forward="false" selection-start-line="184" selection-start-column="13" selection-end-line="184" selection-end-column="13" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <marker date="1526919014054" expanded="true" signature="9168:9699" ph="INSERT into apk_detail... " />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="TestAny.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/test/TestAny.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="168">
-                  <caret line="8" column="25" lean-forward="false" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="GetTestGexf.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/test/GetTestGexf.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="252">
-                  <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="DrawGraphy.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/DrawGraphy.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="165">
-                  <caret line="306" column="100" lean-forward="false" selection-start-line="306" selection-start-column="100" selection-end-line="306" selection-end-column="100" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#1470#1502#0" expanded="true" />
-                    <element signature="e#2103#2119#0" expanded="true" />
-                    <element signature="e#3498#3525#0" expanded="true" />
-                    <element signature="e#4874#4882#0" expanded="true" />
-                    <element signature="e#8956#8972#0" expanded="true" />
-                    <marker date="1527136947954" expanded="true" signature="1168:1228" ph="select * fro... method" />
-                    <marker date="1527136947954" expanded="true" signature="3210:3284" ph="select * fro... invoke" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="ParseXmlFile.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/parse/ParseXmlFile.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="229" column="49" lean-forward="false" selection-start-line="229" selection-start-column="49" selection-end-line="229" selection-end-column="49" />
+              <folding>
+                <element signature="e#667#705#0" expanded="false" />
+                <element signature="e#8399#8446#0" expanded="false" />
+                <element signature="e#9464#9485#0" expanded="false" />
+                <element signature="e#10475#10494#0" expanded="false" />
+                <element signature="method#getParams#0;class#ParseXmlFile#0" expanded="false" />
+                <element signature="method#getReturn#0;class#ParseXmlFile#0" expanded="false" />
+                <element signature="method#getParamsType#0;class#ParseXmlFile#0" expanded="false" />
+                <element signature="method#createXml#0;class#ParseXmlFile#0" expanded="false" />
+                <marker date="1527766593383" expanded="true" signature="4926:5161" ph="INSERT INTO method" />
+                <marker date="1527766593383" expanded="true" signature="8221:9450" ph="{...}" />
+                <marker date="1527766593383" expanded="false" signature="9072:9114" ph="{...}" />
+                <marker date="1527766593383" expanded="false" signature="9145:9193" ph="{...}" />
+                <marker date="1527766593383" expanded="false" signature="9324:9436" ph="{...}" />
+                <marker date="1527766593383" expanded="false" signature="10623:10755" ph="{...}" />
+                <marker date="1527766593383" expanded="true" signature="14701:14769" ph="Insert into invoke... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StoreApkGexf.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/parse/StoreApkGexf.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3465">
+              <caret line="176" column="44" lean-forward="false" selection-start-line="176" selection-start-column="44" selection-end-line="176" selection-end-column="44" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#9163#9180#0" expanded="false" />
+                <marker date="1526992717945" expanded="true" signature="10160:10351" ph="select * fro... apk_store_info" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DrawGraphy.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/DrawGraphy.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="63">
+              <caret line="12" column="22" lean-forward="true" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+              <folding>
+                <element signature="method#getRelationJson#0;class#DrawGraphy#0" expanded="false" />
+                <marker date="1528188339630" expanded="true" signature="1163:1223" ph="select * fro... method" />
+                <marker date="1528188339630" expanded="true" signature="3328:3402" ph="select * fro... invoke" />
+                <marker date="1528188339630" expanded="true" signature="5704:5917" ph="SELECT packa... apk_detail" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ParseStaticHtml.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/parse/ParseStaticHtml.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="66" column="35" lean-forward="true" selection-start-line="66" selection-start-column="35" selection-end-line="66" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1478#1527#0" expanded="false" />
+                <marker date="1528638528367" expanded="true" signature="1824:2196" ph="{...}" />
+                <marker date="1528638528367" expanded="false" signature="2082:2182" ph="{...}" />
+                <marker date="1528638528367" expanded="true" signature="9167:9698" ph="INSERT into apk_detail... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GooglePAppInfo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/bean/GooglePAppInfo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="399">
+              <caret line="19" column="22" lean-forward="false" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -248,13 +175,11 @@
         <option value="$PROJECT_DIR$/src/main/bean/StoreApkInfoBean.java" />
         <option value="$PROJECT_DIR$/src/main/parse/MethodItem.java" />
         <option value="$PROJECT_DIR$/src/main/util/ContenUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/parse/ParseXmlFile.java" />
         <option value="$PROJECT_DIR$/src/main/parse/StoreApkInfo.java" />
         <option value="$PROJECT_DIR$/src/main/util/ParseUtil.java" />
         <option value="$PROJECT_DIR$/src/main/bean/MethodItem.java" />
         <option value="$PROJECT_DIR$/src/main/bean/GooglePAppInfo.java" />
         <option value="$PROJECT_DIR$/src/main/test/TestAny.java" />
-        <option value="$PROJECT_DIR$/src/main/parse/ParseStaticHtml.java" />
         <option value="$PROJECT_DIR$/src/main/test/GetTestGexf.java" />
         <option value="$PROJECT_DIR$/src/main/parse/StoreApkGexf.java" />
         <option value="$PROJECT_DIR$/src/main/util/TagSorted" />
@@ -262,6 +187,8 @@
         <option value="$PROJECT_DIR$/src/main/util/TagSortedApplication" />
         <option value="$PROJECT_DIR$/src/main/parse/SaveToMysql.java" />
         <option value="$PROJECT_DIR$/src/main/DrawGraphy.java" />
+        <option value="$PROJECT_DIR$/src/main/parse/ParseStaticHtml.java" />
+        <option value="$PROJECT_DIR$/src/main/parse/ParseXmlFile.java" />
       </list>
     </option>
   </component>
@@ -272,8 +199,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="28" />
-    <option name="y" value="133" />
+    <option name="x" value="683" />
     <option name="width" value="683" />
     <option name="height" value="728" />
   </component>
@@ -292,6 +218,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -299,43 +227,12 @@
               <item name="coolapk-spider" type="b2602c69:ProjectViewProjectNode" />
               <item name="googleplayspider" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="coolapk-spider" type="b2602c69:ProjectViewProjectNode" />
-              <item name="googleplayspider" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="coolapk-spider" type="b2602c69:ProjectViewProjectNode" />
-              <item name="googleplayspider" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="coolapk-spider" type="b2602c69:ProjectViewProjectNode" />
-              <item name="googleplayspider" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="coolapk-spider" type="b2602c69:ProjectViewProjectNode" />
-              <item name="googleplayspider" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="coolapk-spider" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -348,8 +245,8 @@
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/commons-lang-2.6.jar!/" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Pictures" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
   </component>
   <component name="RecentsManager">
@@ -385,9 +282,9 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="main.DrawGraphy" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="100" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
@@ -567,7 +464,7 @@
     <option name="remove_strategy" value="false" />
   </component>
   <component name="StructureViewFactory">
-    <option name="ACTIVE_ACTIONS" value=",SHOW_INHERITED,SHOW_PROPERTIES,SHOW_INTERFACES,SHOW_FIELDS" />
+    <option name="ACTIVE_ACTIONS" value=",SHOW_PROPERTIES,SHOW_INTERFACES" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -609,12 +506,23 @@
       <workItem from="1526971478091" duration="13471000" />
       <workItem from="1527038257767" duration="20646000" />
       <workItem from="1527088349978" duration="3201000" />
-      <workItem from="1527125899587" duration="5909000" />
+      <workItem from="1527125899587" duration="10772000" />
+      <workItem from="1527605147574" duration="229000" />
+      <workItem from="1527700825886" duration="4413000" />
+      <workItem from="1527766452074" duration="5688000" />
+      <workItem from="1527792685512" duration="2970000" />
+      <workItem from="1527832213412" duration="7730000" />
+      <workItem from="1527845514373" duration="1517000" />
+      <workItem from="1528184875332" duration="4948000" />
+      <workItem from="1528552142106" duration="858000" />
+      <workItem from="1528637791244" duration="1452000" />
+      <workItem from="1528643512035" duration="994000" />
+      <workItem from="1528725522328" duration="79000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="347199000" />
+    <option name="totallyTimeSpent" value="382940000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -627,24 +535,22 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.53267974" sideWeight="0.50680786" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45588234" sideWeight="0.49319214" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20751634" sideWeight="0.49319214" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17473525" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2397882" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14599092" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22163388" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -654,6 +560,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -756,20 +663,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/jre/lib/javaws.jar!/com/sun/javaws/CacheUtil.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1701">
-          <caret line="39" column="19" lean-forward="true" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/lang/Cloneable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="52" column="17" lean-forward="false" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/httpcore-4.4.6.jar!/org/apache/http/HttpEntity.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="146">
@@ -824,13 +717,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
           <caret line="7" column="44" lean-forward="false" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/bean/MyWeb.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1491">
-          <caret line="112" column="16" lean-forward="false" selection-start-line="112" selection-start-column="16" selection-end-line="112" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -890,18 +776,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/download/ApkFileDown.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="70" column="0" lean-forward="true" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/io/File.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="488">
           <caret line="873" column="19" lean-forward="false" selection-start-line="873" selection-start-column="19" selection-end-line="873" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1007,50 +885,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/parse/StoreApkInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1806">
-          <caret line="94" column="25" lean-forward="false" selection-start-line="94" selection-start-column="16" selection-end-line="94" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/bean/GooglePAppInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1743">
-          <caret line="135" column="0" lean-forward="false" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/util/AbstractCollection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="452" column="18" lean-forward="false" selection-start-line="452" selection-start-column="18" selection-end-line="452" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/parse/ParseStaticHtml.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3612">
-          <caret line="184" column="13" lean-forward="false" selection-start-line="184" selection-start-column="13" selection-end-line="184" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1526919014054" expanded="true" signature="9168:9699" ph="INSERT into apk_detail... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/test/GetTestGexf.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/test/GetPackageName.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="28" column="45" lean-forward="true" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -1058,33 +896,129 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="8" column="25" lean-forward="false" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/parse/ParseXmlFile.java">
+    <entry file="file://$PROJECT_DIR$/src/main/parse/SaveToMysql.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4725">
-          <caret line="419" column="38" lean-forward="false" selection-start-line="419" selection-start-column="36" selection-end-line="419" selection-end-column="38" />
-          <folding>
-            <element signature="e#667#705#0" expanded="false" />
-            <element signature="e#6473#6516#0" expanded="false" />
-            <element signature="method#geneMethodItem#0;class#ParseXmlFile#0" expanded="false" />
-            <element signature="e#9691#9712#0" expanded="false" />
-            <element signature="method#getParams#0;class#ParseXmlFile#0" expanded="false" />
-            <element signature="method#getReturn#0;class#ParseXmlFile#0" expanded="false" />
-            <element signature="method#getParamsType#0;class#ParseXmlFile#0" expanded="false" />
-            <element signature="method#createXml#0;class#ParseXmlFile#0" expanded="false" />
-            <marker date="1526876985160" expanded="true" signature="4926:5161" ph="INSERT INTO method" />
-            <marker date="1526876985160" expanded="true" signature="14928:14996" ph="Insert into invoke... " />
-          </folding>
+        <state relative-caret-position="2226">
+          <caret line="106" column="46" lean-forward="false" selection-start-line="106" selection-start-column="46" selection-end-line="106" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/util/Random.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-288">
+          <caret line="339" column="37" lean-forward="true" selection-start-line="339" selection-start-column="37" selection-end-line="339" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/parse/StoreApkInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1554">
+          <caret line="82" column="45" lean-forward="false" selection-start-line="82" selection-start-column="45" selection-end-line="82" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/util/TagSorted">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" column="9" lean-forward="false" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/util/TagSortedGames">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="17" column="4" lean-forward="false" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/util/TagSortedApplication">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="9" lean-forward="false" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/test/GetPackageName.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="29" column="79" lean-forward="true" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/util/AbstractCollection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="452" column="18" lean-forward="false" selection-start-line="452" selection-start-column="18" selection-end-line="452" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/main.bean.MethodItem">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>main.bean.MethodItem</OriginalElement>
+          <nodes>
+            <node x="0.0" y="0.0">main.bean.MethodItem</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.1" x="-196.0" y="-19.0" />
+          <SelectedNodes>
+            <node>main.bean.MethodItem</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Inner Classes</Category>
+            <Category>Constructors</Category>
+            <Category>Properties</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/bean/MethodItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/main.bean.GooglePAppInfo">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>main.bean.GooglePAppInfo</OriginalElement>
+          <nodes>
+            <node x="" y="">main.bean.GooglePAppInfo</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="46.0" y="-57.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Properties</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/bean/GooglePAppInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="19" column="22" lean-forward="false" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/parse/StoreApkGexf.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="35" column="41" lean-forward="false" selection-start-line="35" selection-start-column="41" selection-end-line="35" selection-end-column="41" />
+        <state relative-caret-position="3465">
+          <caret line="176" column="44" lean-forward="false" selection-start-line="176" selection-start-column="44" selection-end-line="176" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#9163#9180#0" expanded="false" />
@@ -1093,75 +1027,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/util/TagSorted">
+    <entry file="file://$PROJECT_DIR$/src/main/parse/ParseXmlFile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="924">
-          <caret line="44" column="7" lean-forward="true" selection-start-line="44" selection-start-column="7" selection-end-line="44" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/util/TagSortedGames">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="11" lean-forward="false" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/util/TagSortedApplication">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="17" column="5" lean-forward="false" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/bean/MethodItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="25" lean-forward="false" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+        <state relative-caret-position="0">
+          <caret line="229" column="49" lean-forward="false" selection-start-line="229" selection-start-column="49" selection-end-line="229" selection-end-column="49" />
           <folding>
-            <element signature="e#195#196#0" expanded="true" />
-            <element signature="e#226#227#0" expanded="true" />
-            <element signature="e#271#272#0" expanded="true" />
-            <element signature="e#311#312#0" expanded="true" />
+            <element signature="e#667#705#0" expanded="false" />
+            <element signature="e#8399#8446#0" expanded="false" />
+            <element signature="e#9464#9485#0" expanded="false" />
+            <element signature="e#10475#10494#0" expanded="false" />
+            <element signature="method#getParams#0;class#ParseXmlFile#0" expanded="false" />
+            <element signature="method#getReturn#0;class#ParseXmlFile#0" expanded="false" />
+            <element signature="method#getParamsType#0;class#ParseXmlFile#0" expanded="false" />
+            <element signature="method#createXml#0;class#ParseXmlFile#0" expanded="false" />
+            <marker date="1527766593383" expanded="true" signature="4926:5161" ph="INSERT INTO method" />
+            <marker date="1527766593383" expanded="true" signature="8221:9450" ph="{...}" />
+            <marker date="1527766593383" expanded="false" signature="9072:9114" ph="{...}" />
+            <marker date="1527766593383" expanded="false" signature="9145:9193" ph="{...}" />
+            <marker date="1527766593383" expanded="false" signature="9324:9436" ph="{...}" />
+            <marker date="1527766593383" expanded="false" signature="10623:10755" ph="{...}" />
+            <marker date="1527766593383" expanded="true" signature="14701:14769" ph="Insert into invoke... " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/parse/SaveToMysql.java">
+    <entry file="file://$PROJECT_DIR$/src/main/parse/ParseStaticHtml.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2226">
-          <caret line="106" column="46" lean-forward="false" selection-start-line="106" selection-start-column="46" selection-end-line="106" selection-end-column="46" />
+        <state relative-caret-position="336">
+          <caret line="66" column="35" lean-forward="true" selection-start-line="66" selection-start-column="35" selection-end-line="66" selection-end-column="35" />
           <folding>
-            <element signature="method#getConn#0;class#SaveToMysql#0" expanded="false" />
-            <marker date="1527052984893" expanded="true" signature="1120:1151" ph="insert into cg... " />
-            <marker date="1527052984893" expanded="true" signature="2536:2567" ph="insert into cg... " />
-            <marker date="1527052984893" expanded="true" signature="3309:3325" ph="select * fro... cg" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1478#1527#0" expanded="false" />
+            <marker date="1528638528367" expanded="true" signature="1824:2196" ph="{...}" />
+            <marker date="1528638528367" expanded="false" signature="2082:2182" ph="{...}" />
+            <marker date="1528638528367" expanded="true" signature="9167:9698" ph="INSERT into apk_detail... " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/util/Random.java">
+    <entry file="file://$PROJECT_DIR$/src/main/bean/MyWeb.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-288">
-          <caret line="339" column="37" lean-forward="true" selection-start-line="339" selection-start-column="37" selection-end-line="339" selection-end-column="37" />
+        <state relative-caret-position="-1016">
+          <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/download/ApkFileDown.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1176">
+          <caret line="82" column="53" lean-forward="true" selection-start-line="82" selection-start-column="53" selection-end-line="82" selection-end-column="53" />
+          <folding>
+            <marker date="1525805232746" expanded="true" signature="2594:2773" ph="SELECT first... main_next_tag" />
+            <marker date="1525805232746" expanded="true" signature="7999:8504" ph="INSERT INTO apk_info... " />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/DrawGraphy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="306" column="100" lean-forward="false" selection-start-line="306" selection-start-column="100" selection-end-line="306" selection-end-column="100" />
+        <state relative-caret-position="63">
+          <caret line="12" column="22" lean-forward="true" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1470#1502#0" expanded="true" />
-            <element signature="e#2103#2119#0" expanded="true" />
-            <element signature="e#3498#3525#0" expanded="true" />
-            <element signature="e#4874#4882#0" expanded="true" />
-            <element signature="e#8956#8972#0" expanded="true" />
-            <marker date="1527136947954" expanded="true" signature="1168:1228" ph="select * fro... method" />
-            <marker date="1527136947954" expanded="true" signature="3210:3284" ph="select * fro... invoke" />
+            <element signature="method#getRelationJson#0;class#DrawGraphy#0" expanded="false" />
+            <marker date="1528188339630" expanded="true" signature="1163:1223" ph="select * fro... method" />
+            <marker date="1528188339630" expanded="true" signature="3328:3402" ph="select * fro... invoke" />
+            <marker date="1528188339630" expanded="true" signature="5704:5917" ph="SELECT packa... apk_detail" />
           </folding>
         </state>
       </provider>

@@ -142,7 +142,6 @@ public class ParseXmlFile {
                 Iterator<Element> nodeElements = element.elementIterator(); //处理 node
                 while (nodeElements.hasNext()){
                     Element tmpNode = nodeElements.next();  //迭代node
-
                     MethodItem methodItem = geneMethodItem(tmpNode);
 
                     // 重新设定值
@@ -150,7 +149,7 @@ public class ParseXmlFile {
                     methodItem.setAppName(apkName);
                     methodItem.setRecordId(Integer.parseInt(recordId));
 
-    //                数据库操作
+                   // 数据库操作
                     statement.setString(1,methodItem.getRecordId()+"");
                     statement.setString(2,methodItem.getApkVersion());
                     statement.setString(3,methodItem.getAppName());
@@ -161,11 +160,6 @@ public class ParseXmlFile {
                     statement.setString(8,methodItem.getMethodName());
                     statement.setString(9,methodItem.getMethodParams());
                     statement.setString(10,methodItem.getReturyType());
-
-    //                @TODO 用于测试参数长度 导致的插入不成功问题
-    //                if(methodItem.getMethodParams().length() > maxParamsLength ){
-    //                    System.out.println(methodItem.toString());
-    //                }
 
                     statement.addBatch();
                     counter++;
